@@ -1,0 +1,9 @@
+.row: .col-xs-12
+  each experience in data.experiences
+    .experience
+      .name= experience.name
+      .title= experience.title
+      .state= experience.location.state
+      .start= experience._.date.start.format('MMMM Do YYYY')
+      .end= experience._.date.end.format('MMMM Do YYYY')
+      .details!= experience.details

@@ -1,0 +1,22 @@
+extends ../layouts/default
+
+block content
+	if data.hero
+		section#hero: .container
+			include ../includes/hero
+	
+	section#profile: .container
+		include ../includes/profile
+		
+	section#experiences: .container
+		include ../includes/experiences
+		
+	section#skills: .container
+		include ../includes/skills
+		
+	section#educations: .container
+		include ../includes/educations
+		
+	section#projects: .container
+		include ../includes/projects
+		

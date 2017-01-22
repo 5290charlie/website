@@ -1,0 +1,6 @@
+mixin debug-info(vars)
+	if env == 'development'
+		each val, key in vars
+			p
+				strong=key 
+				pre!=JSON.stringify(val, null, 2)

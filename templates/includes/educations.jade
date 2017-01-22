@@ -1,0 +1,20 @@
+.row: .col-xs-12
+  each education in data.educations
+    .education
+      .name= education.name
+      
+      .attended
+        | #{education._.date.start.format('MMMM YYYY')}
+        | &nbsp;-&nbsp;
+        | #{education._.date.end.format('MMMM YYYY')}
+      
+      if education.graduation.complete
+        .graduation
+          .date
+            | Graduated #{education._.graduation.date.format('MMMM YYYY')} 
+          .focus
+            | #{education.graduation.degree.short}
+            | &nbsp;-&nbsp;
+            | #{education.graduation.focus}
+      
+      .details!= education.details
